@@ -3,27 +3,47 @@
 <head>
 <title>Web Form</title>
 <link rel='stylesheet' type=text/css href='Stylesheet.css'>
+<script type="text/javascript">
+	function check_info(){
+		
+		var firstname=document.getElementById("firstname").value;
+		var lastname=document.getElementById('lastname').value;
+		var email=document.getElementById('email').value;
+		
+		if(firstname =="" || lastname=="" || email==""){
+			alert('Please fill in all fields');
+			return false;
+		}
+		else
+			return true;
+		
+	}
+
+
+</script>
 </head>
 <body>
 <div id="header"> Contact Form</div><br><br>
-<div id="inputs">
-First Name: <input type="text" name="firstname" value="First Name"><br><br>
-Last Name: <input type="text" name="lastname" value="Last Name"><br><br>
-E-Mail: <input type="text" name="email" value="Email ID"><br><br>
+<form action="Submission.html" method="post" onsubmit="return check_info()" >
+<div id="input1">
+ 
+First Name: <input type="text" id="firstname"><br><br>
+Last Name: <input type="text" id="lastname" ><br><br>
+E-Mail: <input type="text" id="email" ><br><br>
 </div>
-<div id="input">
+<div id="input2">
 Message: <textarea rows="3" cols="30"></textarea><br><br>
-Sex: <input type="radio" name="sex" value="male">Male
-<input type="radio" name="sex" value="female">Female
-
-
+Sex: <input type="radio">Male
+<input type="radio">Female
 <br><br><br>
 <input type="checkbox" name="notify" value="update1"> I'd like to receive notices when this website updates.
 <br><br>
 <input type="checkbox" name="notify" value="update2"> I'd like to receive notices pertaining to related websites 
 and their services.
 <br><br><br>
-<input type="submit" name="sex" value="Submit">
+<input type="submit" name="sex" value="Submit"">
+
 </div>
+</form>
 </body>
 </html>
