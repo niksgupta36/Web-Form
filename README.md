@@ -1,2 +1,2 @@
-# Web-Form
-Interactive Web Form to collect user's details and store in MySQL database.
+# Web-Form - Front-end
+Web Form to collect user's details.
